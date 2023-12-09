@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="frm">
+        <img src="{{ url_for('static', filename='indian_flag.jpg') }}" alt="">
+        <h1>BharatGPT</h1>
+        <p>Enter your prompt:</p>
+        <div id="inp">
+            <textarea id="prompt" rows="4" cols="50"></textarea>
+            <div id="inps">
+                <button onclick="tokenizePrompt()">Tokenize</button>
+                <button onclick="classifyPrompt()">Classify</button>
+                <button onclick="extractPrompt()">Extract</button>
+            </div>
+        </div>
+    </div>
+    <div id="result">Result:</div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
